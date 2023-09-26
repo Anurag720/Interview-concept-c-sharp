@@ -95,6 +95,69 @@ REF VS OUT VS this(Keyword)
  => in this when we created instance variable or class variable , and create a function which has same variable name then we use this keyworrd to diff. b/w them
 
 DIFFERENT WAYS TO METHOD OVERLOAD IN C#
+in c# method overloading allow to define multiple methods in same class with same name but different parameters, the complier determines which method to call baseed on number or types of arguments passed
+* by parameters different types   -> public void Do(int a) -> public void Do(string a){}
+* by different numbers of parameters -> public void Do(int a, int b)  ->public void Do(int a, int b, int c){}
+* by different parameter order -> public void Do(string msg, int count)  -> public void Do(int count , string msg){}
+
+BOXING VS UNBOXING
+In c# mainly their are 3 data type Value (char,int) Reference (object) and pointers
+= process of Converting value type to reference is called BOXING
+= process of converting reference type to value type is called UNBOXING.
+
+EARLYBINDING VS LATEBINDING
+*earlybinding , is like computer figures out what to do with piece of code before actually doing ,it,s like knowing all the rules and steps before you start a task
+
+CONSTANTS VS READ ONLY 
+ = constants are like fixed values that never change, when we declare constant value , we cannot modified afterwards, like for maths constant, constants are determined at complie time 
+ = read-only value are also once set cannot change and mainly evaluated at runtime when an object of class is created  
+Constants: Values of constants are set at compile-time. They are determined and set when you write the code and remain fixed throughout the program's execution.
+Read-Only Fields: Values of read-only fields are determined and set at runtime, typically during the creation of an object of a class that contains the read-only field. Once set, their values remain fixed for the lifetime of the object.
+
+Jagged Arrays
+it is like array inside array , array inside array of different length is stored in jagged array
+
+String vs StringBuilder
+ main difference between them is if we declare string then it is immutable means once created cannot we changed, any operation appers to modify string  actually created new string, good for text that does not change frequently , but memoery managment is not good
+ on other hand string builder string is mutable, this makes more efficient for string manipulation, and it is memory efficient also 
+
+COPY_TO() VS CLONE()
+copy to is used to copies elements of one collection or array into another , and used to duplicate contents from one collection to another but doe'nt create new collection or object, can be helpful when we want to transfer elements b/w collections or need to create back'up
+clone is used to created new objects that is copy of original objects , new object has separate instance then original, it duplicate objects + its references also
+
+DISPOSE() VS FINALIZE()
+dispose= it is used to free up the space and resources when object is done by use for cleaning 
+In simple terms, Dispose is something you can call explicitly to release resources immediately when you're done with an object, while Finalize is a safety net provided by the garbage collector to clean up resources if you forget to call Dispose.
+Finalize() is a method called by garbage collector during cleanup process.
+
+DELEGATES
+In simple terms, a delegate in C# is like a pointer to a method. It allows you to store a reference to a method and then call that method through the delegate. Think of it as a way to pass around and use functions just like you pass around and use variables. 
+This can be handy when you want to provide a piece of code (a method) to be executed by another piece of code at a later time or under specific conditions. Delegates are often used for things like handling events, callbacks, and creating flexible, reusable code.
+
+CONSTRUCTURE CHAINING 
+it is a concept in oops where one constructor of class can call another constructor wihtin same class. It allows you to reuse code and set up object initialization in a more efficient and organized way. Constructor chaining is particularly useful when you have multiple 
+constructors in a class with different sets of parameters but want to avoid duplicating initialization code.
+
+GENERICS IN C#
+In programming, generics let you create classes, methods, or interfaces that can work with different data types (like integers, strings, or custom objects) in a way that's both flexible and safe. This makes your code more efficient, reusable, and less error-prone
+
+PUBLIC VS PRIVATE VS PRIVATE PROTECTED VS PROTECTED VS INTERNAL
+
+Public: It's like leaving a door wide open. Everyone can access the element. No restrictions.
+Private: It's like locking a door and keeping the key to yourself. Only the code within the same class can access the element.
+Protected: It's like having a special key that you give to your family members. The element can be accessed within the class and by classes that inherit from it (like a child class).
+Internal: It's like locking a door but allowing access to anyone inside the same building (assembly). The element can be accessed by code in the same assembly.
+Protected Internal: It's like a combination of protected and internal. The element can be accessed within the same assembly and by classes that inherit from it (like a child class), even if they are in different assemblies.
+Private Protected (C# 7.2 and later): It's like a combination of private and protected. The element can be accessed within the same class and by classes that inherit from it (like a child class) but only if they are in the same assembly.
+
+HASH TABLES CLASS
+The HashTable class in C# is like a smart container that stores data in pairs: a key and a value. It's similar to a dictionary where you can quickly find things (values) using their names (keys). The HashTable uses a special technique called 
+hashing to make this search really fast, making it great for organizing and retrieving data efficiently.
+
+
+SINGLETON
+it is used when we only want one object of a class throughout , means it not allow to create mu;tiple instance or objects of a class.
+
 
 
 
