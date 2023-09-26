@@ -1,0 +1,100 @@
+What is C#?
+so c# was developed by microsoft in 2000 when they are developing .net framework , c# run with .net framework and c# is oops based language similar to c++ or java mainly used for creating software components
+
+C# VS C 
+C# is based on oops and has modern features for software development and it required .net framework to execute 
+on other hand C is procedural programming , it has pointers and can be excuted in cross plateform
+
+* (.NET)
+It is a software development plateform by microsoft , it provides tools and libraries that help developers build wide range of applications
+.net includes runtime environment called Commom Language Runtime(CLR) that manages execute .net programs 
+
+* (JIT)
+Just in time compliation is a technique used by CLR for the optimisation and performance improvement of .NET applications
+When you write code in a .NET language like C#, it's first compiled into an intermediate language called Common Intermediate Language (CIL) or Microsoft Intermediate Language (MSIL). When you run your program, the JIT compiler converts this
+CIL code into machine code that can be executed by the computer's CPU. This conversion happens just before the code is executed, hence the name "Just-In-Time."
+
+* CLR (Common Language Runtime): The CLR is the runtime environment within .NET that manages the execution of .NET programs. It provides services like memory management, exception handling, security, and more. The CLR also includes the JIT compiler, 
+which translates CIL code into machine code at runtime. It ensures that .NET programs can run on different platforms because it handles the low-level details of execution.
+
+* CLI (Common Language Infrastructure): The CLI is a specification that defines the standards for creating and executing programs written in various .NET languages. It's not a programming language itself but a set of rules that languages like C# and 
+Visual Basic follow. The key idea is that these languages compile into a common intermediate language (CIL/MSIL), which can be executed by any CLR that adheres to the CLI standards. 
+This allows for language interoperability and portability across different platforms.
+
+GARBAGE COLLECTION IN C#
+Imagine your computer's memory as a big storage room where you keep things (data). When you run a program in C#, it uses this storage room to store information, like numbers, text, and other stuff.
+Now, think of "garbage collection" as a helpful robot that goes around this storage room and checks if there are things you no longer need. If it finds something you're not using anymore (like an old piece of paper), it picks it up and throws it away to make room for new things you might need.
+So, garbage collection in C# is like having a tidy robot that keeps your computer's memory organized. It helps you avoid clutter and ensures that your programs run smoothly without using up too much memory.
+
+Here's how garbage collection helps:
+Creating Objects: As your game runs, you create character objects in memory when new characters appear in the game. For example, you create an object for the main character, another for an enemy, and so on. These objects take up memory space.
+No Longer Needed: As the game progresses, some characters may disappear or are no longer needed because they are defeated or go off-screen. When this happens, you no longer need those character objects.
+Garbage Collection: Here's where garbage collection comes in. It's like a cleaning process that runs in the background. It periodically checks all the objects in memory to see if they are still being used or if they're no longer needed.
+Removing Unused Objects: If the garbage collector finds character objects that are no longer needed (because they're not part of the game anymore), it will safely remove them from memory. This frees up the memory space they were occupying.
+
+TYPES OF CLASSES IN C#
+Abstract class
+Partial claass
+Sealed class
+static class
+
+=>Sealed class -In simple terms sealed class is used when we don't wanted futher derived class or child class, overall when we use sealed classs it cannot be inheritated
+=>Abstract class - just like abstraction this class is used to create or provide a blueprint to other class, we direclty cannot creeated the objects from this , its structure is utilize by other inheritance class and then we can created object from that.
+=>static class - When we made or declare class as satic then we cannot make its intances or ojects , we can simple call the member function , just like with functions, but cannot created objects or instances from it , all data members inside static class is declared by static keyword
+=>Partial class - It is used when we wanted to use one file data into different files then we use partial class, if we declare class by partial then we can use class data into multiple files and all files combines into single file when application is complied 
+
+Abstract vs Interface
+Abstract Class:
+Like a blueprint for a house that includes some pre-built rooms.
+Can have both empty rooms (abstract methods) and furnished rooms (implemented methods).
+Provides a foundation for related objects to build upon.
+
+Interface:
+Like a checklist of tasks without any instructions on how to do them.
+Contains only tasks that objects must promise to do.
+Used when different objects need to promise they can perform certain tasks, even if they're not related in any other way.
+
+
+EXTENSION METHODS IN C#
+It is concept that allow us to add new member in existing class without changing the original source code , we can implemented a new method in existing class without modification
+
+Inheritance In C#
+Concept of oops but in c# multiple inheritance is not supported means , we cannot inheritance a sub class by multiple base class overall it only support single inheritance
+but it support multiple level Interface, use can use in place of that
+
+MANAGED VS UNMANAGED code
+a code is said to be managed when it run inside .net environment , in which memory handling, security , and other task are done by .net environment only
+a unmanaged code is that which rrun outside the .net environment , and your're responsible for handling memory, security and other details directly, it provide more control but also more responsiblity and control
+
+CLASS:
+Class is a reference type.
+Memory is allocated on the heap.
+Supports inheritance.
+Default constructor provided if not defined.
+Can have methods, fields, properties, and events.
+Supports access modifiers (public, private, etc.).
+Used for more complex objects with behavior.
+
+STRUCTURE (Struct):
+Struct is a value type.
+Memory is allocated on the stack.
+Doesn't support inheritance.
+Default constructor must be explicitly defined if needed.
+Can have fields, properties, and methods (but no events).
+Limited support for access modifiers (fields can't be protected or protected internal).
+Used for lightweight data structures and simple objects.
+
+
+ENUMS
+ Enums in C# provide a way to group related values or options under a single, meaningful name. This makes your code more organized and easier to understand because you can use these named constants instead of using raw
+  numbers or strings. Enums are a way to create a collection of related data elements with distinct names, making your code more readable and self-explanatory.
+
+REF VS OUT VS this(Keyword)
+ => In ref all value are passed by references , here all intilization and result  should also pass by ref keyword
+ => In out all variable are passed by refernces,  but we have to only indicate results no need for intilization
+ => in this when we created instance variable or class variable , and create a function which has same variable name then we use this keyworrd to diff. b/w them
+
+DIFFERENT WAYS TO METHOD OVERLOAD IN C#
+
+
+
