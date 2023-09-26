@@ -1,0 +1,29 @@
+using System;
+
+class anurag
+{
+    public string str;
+    public int c;
+
+    public static anurag operator +(anurag obj1, anurag obj2)
+    {
+        anurag obj3 = new anurag();
+        obj3.str = obj1.str + obj2.str;
+        obj3.c = obj1.c + obj2.c;
+        return obj3;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        anurag obj1 = new anurag { str = "Hello, ", c = 5 };
+        anurag obj2 = new anurag { str = "World!", c = 10 };
+
+        anurag obj3 = obj1 + obj2;
+
+        Console.WriteLine("Concatenated String: " + obj3.str);
+        Console.WriteLine("Sum of Integers: " + obj3.c);
+    }
+}

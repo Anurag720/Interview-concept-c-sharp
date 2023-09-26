@@ -1,0 +1,64 @@
+using System;
+
+// Base class (parent class)
+class Vehicle
+{
+    public string Brand { get; set; }
+    public string Model { get; set; }
+    public int Year { get; set; }
+
+    public Vehicle(string brand, string model, int year)
+    {
+        Brand = brand;
+        Model = model;
+        Year = year;
+    }
+
+    public void StartEngine()
+    {
+        Console.WriteLine("Engine started.");
+    }
+
+    public void StopEngine()
+    {
+        Console.WriteLine("Engine stopped.");
+    }
+}
+
+// Derived class (child class) inheriting from Vehicle
+class Car : Vehicle
+{
+    public Car(string brand, string model, int year) : base(brand, model, year)
+    {
+    }
+
+    public void Accelerate()
+    {
+        Console.WriteLine("Car is accelerating.");
+    }
+
+    public void Brake()
+    {
+        Console.WriteLine("Car is braking.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Create an instance of the Car class
+        Car myCar = new Car("Toyota", "Camry", 2022);
+
+        // Access properties and methods from the base class
+        Console.WriteLine($"Brand: {myCar.Brand}, Model: {myCar.Model}, Year: {myCar.Year}");
+        myCar.StartEngine();
+
+        // Access methods specific to the derived class
+        myCar.Accelerate();
+        myCar.Brake();
+
+        // Access a method from the base class
+        myCar.StopEngine();
+    }
+}

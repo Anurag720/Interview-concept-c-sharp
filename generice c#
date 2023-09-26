@@ -1,0 +1,34 @@
+using System;
+
+// A generic class that can work with different data types
+class MyGenericClass<T>
+{
+    private T data;
+
+    public MyGenericClass(T value)
+    {
+        data = value;
+    }
+
+    public T GetData()
+    {
+        return data;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Create instances of the generic class with different data types
+        MyGenericClass<int> intInstance = new MyGenericClass<int>(42);
+        MyGenericClass<string> stringInstance = new MyGenericClass<string>("Hello, Generics!");
+
+        // Get and display the data
+        int intValue = intInstance.GetData();
+        string stringValue = stringInstance.GetData();
+
+        Console.WriteLine("Integer Value: " + intValue);
+        Console.WriteLine("String Value: " + stringValue);
+    }
+}

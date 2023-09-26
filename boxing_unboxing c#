@@ -1,0 +1,18 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Boxing: Converting a value type (int) to a reference type (object)
+        int intValue = 42;
+        object boxedValue = intValue;
+
+        // Unboxing: Converting the boxed object back to a value type
+        int unboxedValue = (int)boxedValue;
+
+        Console.WriteLine("Original Integer: " + intValue);
+        Console.WriteLine("Boxed Object: " + boxedValue);
+        Console.WriteLine("Unboxed Integer: " + unboxedValue);
+    }
+}

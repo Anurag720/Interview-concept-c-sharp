@@ -1,0 +1,65 @@
+using System;
+
+class Person
+{
+    private string name;
+
+    public Person(string name)
+    {
+        // Use 'this' to distinguish between the class field and the constructor parameter
+        this.name = name;
+    }
+
+    public void Introduce()
+    {
+        Console.WriteLine("Hello, my name is " + this.name);
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Create an instance of the Person class
+        Person person = new Person("John");
+
+        // Call the Introduce method to display the name
+        person.Introduce();
+    }
+}
+
+
+using System;
+
+class Program
+{
+    // Method using 'ref' parameter to modify the input value
+    static void ModifyValue(ref int value)
+    {
+        value = value * 2;
+    }
+
+    // Method using 'out' parameter to return multiple values
+    static void GetSumAndDifference(int a, int b, out int sum, out int difference)
+    {
+        sum = a + b;
+        difference = a - b;
+    }
+
+    static void Main()
+    {
+        int number = 5;
+
+        // Using 'ref' to modify the 'number'
+        ModifyValue(ref number);
+        Console.WriteLine("After 'ref' modification: " + number);
+
+        int resultSum, resultDifference;
+
+        // Using 'out' to get both sum and difference
+        GetSumAndDifference(10, 5, out resultSum, out resultDifference);
+        Console.WriteLine("Sum: " + resultSum);
+        Console.WriteLine("Difference: " + resultDifference);
+    }
+}
+

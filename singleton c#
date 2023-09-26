@@ -1,0 +1,45 @@
+using System;
+
+public class Singleton
+{
+    private static Singleton instance;
+
+    // Private constructor to prevent external instantiation
+    private Singleton()
+    {
+        Console.WriteLine("Singleton instance created.");
+    }
+
+    // Public method to access the singleton instance
+    public static Singleton GetInstance()
+    {
+        if (instance == null)
+        {
+            instance = new Singleton();
+        }
+        return instance;
+    }
+
+    public void DisplayMessage()
+    {
+        Console.WriteLine("Hello from Singleton!");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Get the singleton instance
+        Singleton singleton1 = Singleton.GetInstance();
+
+        // Access the singleton's method
+        singleton1.DisplayMessage();
+
+        // Try to get another instance, but it will return the same one
+        Singleton singleton2 = Singleton.GetInstance();
+
+        // Both instances are the same
+        Console.WriteLine("Are both instances the same? " + (singleton1 == singleton2));
+    }
+}

@@ -1,0 +1,38 @@
+using System;
+
+class Calculator
+{
+    // Method to add two integers
+    public int Add(int a, int b)
+    {
+        return a + b;
+    }
+
+    // Method to add three integers
+    public int Add(int a, int b, int c)
+    {
+        return a + b + c;
+    }
+
+    // Method to add two doubles
+    public double Add(double a, double b)
+    {
+        return a + b;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Calculator calculator = new Calculator();
+
+        int result1 = calculator.Add(10, 5);            // Calls the first Add method
+        int result2 = calculator.Add(10, 5, 3);         // Calls the second Add method
+        double result3 = calculator.Add(3.14, 2.71);   // Calls the third Add method
+
+        Console.WriteLine("Result 1: " + result1);
+        Console.WriteLine("Result 2: " + result2);
+        Console.WriteLine("Result 3: " + result3);
+    }
+}

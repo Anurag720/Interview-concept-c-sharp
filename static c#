@@ -1,0 +1,23 @@
+using System;
+
+// Define a static class
+static class MyStaticClass
+{
+    // Define a static method
+    public static void SayHello()
+    {
+        Console.WriteLine("Hello from the static class!");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Call the static method from the static class
+        MyStaticClass.SayHello();
+
+        // You don't need to create an instance of the static class
+        // to access its static members.
+    }
+}

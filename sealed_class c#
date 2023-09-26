@@ -1,0 +1,18 @@
+using System;
+
+sealed class Program
+{
+    public void Display()
+    {
+        Console.Write("Final");
+    }
+}
+
+class Final
+{
+    static void Main(string[] args)
+    {
+        Program ch = new Program(); // Create an instance of the Program class
+        ch.Display(); // Call the Display method
+    }
+}
